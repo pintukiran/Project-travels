@@ -1,0 +1,183 @@
+/*<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <style>
+.video-background {
+ position: relative;
+ width: 100%;
+ height: 500px;
+ overflow: hidden;
+}
+
+.video-background video {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ z-index: 0;
+ transform: translate(-50%, -50%);
+ transition: 1s opacity;
+}
+
+.blinking-text {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ color: #fff;
+ font-size: 48px;
+ font-weight: bold;
+ z-index: 1;
+ transform: translate(-50%, -50%);
+ animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+    </style>
+
+<div class="video-background">
+ <video autoplay muted loop>
+    <source src="./new plane.mp4" type="video/mp4">
+ </video>
+ <h1 class="blinking-text">PM TRAVELS SOLUTIONS</h1>
+</div>
+
+</body>
+</html>*/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video and Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1.5em;
+        }
+        
+
+
+
+.text-box{
+    position:absolute;
+    top:0;
+    left:0;
+    background:#000;
+    height:10%;
+    width:10%;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+    font-weight:90%;
+    mix-blend-mode:multiply;
+
+}
+
+
+        @media screen and (max-width: 768px) {
+            .content h1 {
+                font-size: 2em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+        }
+     
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video src="./airoplane.mp4" muted loop autoplay></video>
+        <div class="content">
+            <div class="text-box">  
+                <h1> WELCOME TO PM TRAVELS SOLUTIONS </h1>
+                </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+ 
+ 
+
+
+
+
+<html>
+    <head>
+        <title> documents</title>
+    </head>
+    <body>
+        <h1 class="font-effect-fire"> welcome to pm travels </h1>
+        <h1 class=""> welcome</h1>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&family=Poppins:wght@700&family=Rubik+Doodle+Shadow&display=swap|fire');
+            h1{
+                font-family: 'Fira Sans', sans-serif;
+                font-family: 'Poppins', sans-serif;
+                font-family: 'Rubik Doodle Shadow', system-ui;
+            } 
+        </style>
+    </body>
+
+</html>
+
