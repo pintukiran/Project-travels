@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>PM Travels</title>
@@ -11,6 +12,11 @@
          
     <body>
 <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
 h1{
   font-family: 'Courier New', Courier, monospace;
   font-size: 80px;
@@ -18,7 +24,7 @@ h1{
 }
 
  h2{
-    text-align: center; 
+    text-align: center;  
   }
   h3{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -32,25 +38,85 @@ h1{
   li{
     color: white;
   }
+  .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Adjust the height as needed */
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+overlay {
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+   }
+   h1 {
+    position: absolute;
+      top: 10%;
+      left: 3%;
+      font-style: italic;
+      text-align:center;
+      color: rgb(141, 137, 78);
+      text-shadow: 2px 2px #ff0000;
+    }
 
-.video-container {
- position: relative;
- width: 100%;
- height: 90%;
- overflow: hidden;
+    .blinking-text{
+      animation:blink 5s infinite;
+      color: aqua;
+      text-shadow: 2px 2px red
+      }
+  
+      
+.text {
+  position: absolute;
+  top: 30;
+  left: 120;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 5s steps(40, end), blink-caret .95s step-end infinite;
+  color:rgb(21, 25, 255);
+  font-size: 60;
+  font-display: 30%;
 }
-
-#video {
- position: absolute;
- width: 100%;
- height: auto;
- object-fit: cover;
- }
-
-
-
-
-@keyframes slide {
+.typing-animation {
+  position: relative;
+  height: 50px; /* adjust as needed */
+  font-size: 3rem; /* adjust as needed */
+  font-weight: bold;
+  overflow: hidden;
+   /* adjust as needed */
+}
+@keyframes typing {
+  from { 
+    width: 0 
+  }
+  0%{
+    animation-delay: 0s;
+  }
+  25%{
+    animation-delay: 0.8s;
+  }
+  50%{
+    animation-delay: 1.8s;
+  }
+  75%{
+    animation-delay: 2.8s;
+  }
+  100%{
+    animation-delay: 3.8s;
+  }
+  to {
+     width: 150%
+     }
+}
+@keyframes overlay {
   0% {
     left: 100%;
  }
@@ -58,6 +124,20 @@ h1{
     left: -100%;
  }
 }
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 2;
+  }
+}
+
+
       </style>
        <nav class="navbar navbar-light bg-light navbar-expand-lg">
         <image src="./final file-01.jpg " width="400" height="100"/>
@@ -74,12 +154,19 @@ h1{
     </nav>
 
     <div class="video-container">
-      <video id="video" autoplay muted loop>
-        <source src="./airoplane.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
       
-     </div>
+ <video id="video" autoplay muted loop> 
+        <source class="st-template-preview-iframe" height="600px" src="./airoplane.mp4" type="video/mp4" data-spai="1" data-spai-upd="1187">
+      </video>
+      <div class="typing-animation"></div>
+      <div class="overlay">
+        <div class="blinking-text">
+       <span class="text"> <em><strong>𝕎𝔼𝕃ℂ𝕆𝕄𝔼 𝕋𝕆 ℙ𝕄 𝕋ℝ𝔸𝕍𝔼𝕃 𝕊𝕆𝕃𝕌𝕋𝕀𝕆ℕ𝕊</strong></em></span>
+        </div>
+      </div>
+    </div>
+      
+     </div> 
  
   </head>
   <body>
@@ -100,6 +187,7 @@ h1{
             <p class="card-text">
              Ticket booking involves Users start by accessing  such as a website or mobile app, where they input details like date, time, destination, and the number of tickets required. Payment details are then submitted to confirm the reservation.The booking system generates a unique ticket or confirmation code, which serves as proof of purchase.
             </p>
+           
           </div>
           
           
@@ -110,7 +198,7 @@ h1{
             <h5 class="card-title">Hotel Booking:-</h5>
             <p class="card-text">
               Hotel booking  users typically start by visiting a hotel booking website or using a dedicated app. They input details such as check-in and check-out dates, the number of guests, and room preferences.The platform then displays available options based on the provided information.</p>
-          </div>
+            </div>
          
           
         </div>
@@ -121,6 +209,7 @@ h1{
             <p class="card-text">
               Visa processing involves  seeking permission to enter a foreign country. Applicants typically start by filling out a visa application form, providing personal information, travel details, and the purpose of the visit and  they submit supporting documents such as passports, photographs, and any required permits.
             </p>
+         
           </div>
           
           
@@ -131,9 +220,7 @@ h1{
               <h5 class="card-title">Website Design:-</h5>
               <p class="card-text">Designing a flight booking website involves creating an intuitive and user-friendly, the homepage typically features a search bar where users input their departure and destination locations, travel dates, and the number of passengers. clicking the search button, the website displays a list of available flights with details such as airline, departure and arrival times and prices.</p>
             </div>
-            
-            
-            
+  
           </div>
         </div>
       </div>
@@ -262,7 +349,7 @@ h1{
             <div style="background-color:rgb(61, 51, 51)">
             <h2 style="text-align: center;">FOUND US:-</h2><br><br><br><br>
             <p>This communication contains information which is confidential and may also be privileged. It is for the exclusive use of the intended recipient(s). If you are not the intended recipient(s) please note that any form of distribution, copying or use of this communication or the information in it is strictly prohibited and may be unlawful. If you have received this communication in error please return it to the sender. The opinions expressed within this communication are not necessarily those expressed By PM travel solutions </p>
-            <i class="fa fa-envelope" style=" font-size: 40px;color:rgb(236, 244, 247);"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:pmtravelsolutions6199@gmail.com<br><br>
+            <i class="fa fa-envelope" style=" font-size: 40px;color:rgb(236, 244, 247);" src=""></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:pmtravelsolutions6199@gmail.com<br><br>
             <p class="fa fa-user" style=" font-size: 40px;color:rgb(236, 244, 247);"></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:+91-9900563983 / +91-8861575917<br><br>
             <p class="fa fa-home" style=" font-size: 40px;color:rgb(236, 244, 247);"></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:sri sai garden layout thambu shetty palya main road Bengaluru-560001<br><br>
           </div>
@@ -275,7 +362,7 @@ h1{
                  <li class="nav-list" class="navbar-brand"><a href="./about.html" class="nav-link" style="color: white;">ABOUT</a></li>&nbsp; &nbsp; &nbsp;  
                 <li class="nav-list" class="navbar-brand"><a href="./service.html" class="nav-link" style="color: white;">SERVICES</a></li>&nbsp; &nbsp; &nbsp; 
                 <li class="nav-list" class="navbar-brand"><a href="./ticketbooking.html" class="nav-link" style="color: white;">TICKET BOOKING</a></li>&nbsp; &nbsp; &nbsp; 
-                <li class="nav-list" class="navbar-brand"><a href="#" class="nav-link" style="color: white;">pmtravelsolutions6199@gmail.com</a></li>&nbsp; &nbsp; &nbsp; 
+                <li class="nav-list" class="navbar-brand"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" class="nav-link" style="color: white;">pmtravelsolutions6199@gmail.com</a></li>&nbsp; &nbsp; &nbsp; 
                 <li class="nav-list" class="navbar-brand"><a href="./TAC.html" class="nav-link" style="color: white;">TERMS AND CONDITIONS</a></li>&nbsp; &nbsp; &nbsp; &nbsp;
                 <li class="nav-list" class="navbar-brand"><a href="#" class="nav-link" style="color: white;">+91-9900563983 / +91-8861575917</a></li> &nbsp; &nbsp; &nbsp; &nbsp;
                 <li class="nav-list" class="navbar-brand"><a href="#" class="nav-link" style="color: white;">MORE</a></li>   
